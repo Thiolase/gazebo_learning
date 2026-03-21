@@ -155,12 +155,24 @@
     <gravity>false</gravity>
     <static>true</static>
   </gazebo>
+  <!-- 虚拟世界链接 -->
+  <link name="world"/>
+  <joint name="world_to_base" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 1" rpy="0 0 0"/>
+  </joint>
 
+  <!-- 让 world 链接静止 -->
+  <gazebo reference="world">
+    <gravity>false</gravity>
+    <static>true</static>
+  </gazebo>
 
-
+  <!-- ========== ros2_control 配置（使用真正的 Gazebo 插件） ========== -->
   <ros2_control name="GazeboSystem" type="system">
     <hardware>
-      <plugin>mock_components/GenericSystem</plugin>
+      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
     </hardware>
     <joint name="joint_Leg_1">
       <command_interface name="position"/>
@@ -180,7 +192,7 @@
     </joint>
   </ros2_control>
 
-  <!-- 全局 Gazebo 插件（Jazzy 版本） -->
+  <!-- Gazebo 插件：加载 ros2_control -->
   <gazebo>
     <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
       <parameters>$(find Leg)/config/leg_controllers.yaml</parameters>
@@ -188,3 +200,4 @@
   </gazebo>
 
 </robot>
+
