@@ -1,0 +1,24 @@
+running develop
+running egg_info
+writing Leg.egg-info/PKG-INFO
+writing dependency_links to Leg.egg-info/dependency_links.txt
+writing requirements to Leg.egg-info/requires.txt
+writing top-level names to Leg.egg-info/top_level.txt
+reading manifest file 'Leg.egg-info/SOURCES.txt'
+writing manifest file 'Leg.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg.egg-link (link to .)
+
+Installed /home/rasp/Desktop/Leg/build/Leg
+running symlink_data
+symbolically linking /home/rasp/Desktop/Leg/build/Leg/resource/Leg -> /home/rasp/Desktop/Leg/install/Leg/share/ament_index/resource_index/packages
+symbolically linking /home/rasp/Desktop/Leg/build/Leg/package.xml -> /home/rasp/Desktop/Leg/install/Leg/share/Leg
+symbolically linking /home/rasp/Desktop/Leg/build/Leg/launch/display.launch.py -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/launch
+symbolically linking /home/rasp/Desktop/Leg/build/Leg/launch/gazebo.launch.py -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/launch
+symbolically linking /home/rasp/Desktop/Leg/build/Leg/urdf/Leg.urdf -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/urdf
+symbolically linking /home/rasp/Desktop/Leg/build/Leg/meshes/Leg_4.STL -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/meshes
+symbolically linking /home/rasp/Desktop/Leg/build/Leg/meshes/Leg_3.STL -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/meshes
+symbolically linking /home/rasp/Desktop/Leg/build/Leg/meshes/base_link.STL -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/meshes
+symbolically linking /home/rasp/Desktop/Leg/build/Leg/meshes/Leg_2.STL -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/meshes
+symbolically linking /home/rasp/Desktop/Leg/build/Leg/meshes/Leg_1.STL -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/meshes
+creating /home/rasp/Desktop/Leg/install/Leg/share/Leg/config

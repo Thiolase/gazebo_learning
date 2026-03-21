@@ -4,6 +4,8 @@ from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, SetEnvironmentVariable, IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
+from launch.actions import SetEnvironmentVariable
+
 
 def generate_launch_description():
     package_name = 'Leg'
@@ -12,30 +14,30 @@ def generate_launch_description():
         get_package_share_directory(package_name), 'config', 'leg_controllers.yaml')
     urdf_path = os.path.join(get_package_share_directory(package_name), 'urdf', urdf_file_name)
 
-    # ¶ÁÈ¡ URDF Îª×Ö·û´®
+    # ï¿½ï¿½È¡ URDF Îªï¿½Ö·ï¿½ï¿½ï¿½
     with open(urdf_path, 'r') as infp:
         robot_description_content = infp.read()
 
-    # ÉèÖÃ×ÊÔ´Â·¾¶£¨Ê¹ Gazebo ÄÜÕÒµ½Íø¸ñÎÄ¼þ£©
+    # ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Â·ï¿½ï¿½ï¿½ï¿½Ê¹ Gazebo ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½
     package_share_directory = get_package_share_directory(package_name)
     gazebo_resources_directory = os.path.dirname(package_share_directory)
 
     ld = LaunchDescription()
 
-    # ÉùÃ÷ use_sim_time
+    # ï¿½ï¿½ï¿½ï¿½ use_sim_time
     ld.add_action(DeclareLaunchArgument(
         'use_sim_time',
         default_value='true',
         description='Use simulation (Gazebo) clock if true'
     ))
 
-    # ÉèÖÃ Gazebo ×ÊÔ´Â·¾¶
+    # ï¿½ï¿½ï¿½ï¿½ Gazebo ï¿½ï¿½Ô´Â·ï¿½ï¿½
     ld.add_action(SetEnvironmentVariable(
         name='GZ_SIM_RESOURCE_PATH',
         value=gazebo_resources_directory
     ))
 
-    # Æô¶¯ Gazebo ¿ÕÊÀ½ç
+    # ï¿½ï¿½ï¿½ï¿½ Gazebo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     gz_sim = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(get_package_share_directory('ros_gz_sim'), 'launch', 'gz_sim.launch.py')
@@ -44,7 +46,7 @@ def generate_launch_description():
     )
     ld.add_action(gz_sim)
 
-    # »úÆ÷ÈË×´Ì¬·¢²¼Æ÷£¨·¢²¼ tf£©
+    # ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ tfï¿½ï¿½
     ld.add_action(Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
@@ -52,17 +54,15 @@ def generate_launch_description():
         parameters=[{'robot_description': robot_description_content}]
     ))
 
-    # ros2_control ¿ØÖÆÆ÷¹ÜÀíÆ÷½Úµã£¨¼ÓÔØ¿ØÖÆÆ÷£©
+    # ros2_control ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµã£¨ï¿½ï¿½ï¿½Ø¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     ld.add_action(Node(
-        package='controller_manager',
-        executable='ros2_control_node',
-        parameters=[{'robot_description': robot_description_content}, controllers_yaml],
-        output='screen',
-        # Èç¹ûÐèÒªµ÷ÊÔ£¬¿ÉÈ¡ÏûÏÂÒ»ÐÐµÄ×¢ÊÍ£¨ÐèÏÈ°²×° gdb£©
-        # prefix=['gdb', '-ex', 'run', '--args'],
+    package='controller_manager',
+    executable='ros2_control_node',
+    parameters=[{'robot_description': robot_description_content}, controllers_yaml],
+    output='screen',
     ))
 
-    # ¼ÓÔØ¹Ø½Ú×´Ì¬¹ã²¥Æ÷£¨·¢²¼ /joint_states£©
+    # ï¿½ï¿½ï¿½Ø¹Ø½ï¿½×´Ì¬ï¿½ã²¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ /joint_statesï¿½ï¿½
     ld.add_action(Node(
         package='controller_manager',
         executable='spawner',
@@ -70,7 +70,7 @@ def generate_launch_description():
         output='screen',
     ))
 
-    # ¼ÓÔØ¹ì¼£¿ØÖÆÆ÷
+    # ï¿½ï¿½ï¿½Ø¹ì¼£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     ld.add_action(Node(
         package='controller_manager',
         executable='spawner',
@@ -78,7 +78,7 @@ def generate_launch_description():
         output='screen',
     ))
 
-    # Éú³É»úÆ÷ÈËÊµÌå£¨Ì§¸ß 0.05 Ã×£©
+    # ï¿½ï¿½ï¿½É»ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½å£¨Ì§ï¿½ï¿½ 0.05 ï¿½×£ï¿½
     spawn_entity = Node(
         package='ros_gz_sim',
         executable='create',
@@ -90,5 +90,13 @@ def generate_launch_description():
         output='screen'
     )
     ld.add_action(spawn_entity)
-
+    # ÔÚ generate_launch_description ÖÐÌí¼Ó
+    ld.add_action(SetEnvironmentVariable(
+        name='ROS_PLUGIN_PATH',
+        value='/opt/ros/jazzy/lib:' + os.environ.get('ROS_PLUGIN_PATH', '')
+    ))
+    ld.add_action(SetEnvironmentVariable(
+        name='LD_LIBRARY_PATH',
+        value='/opt/ros/jazzy/lib:' + os.environ.get('LD_LIBRARY_PATH', '')
+    ))
     return ld

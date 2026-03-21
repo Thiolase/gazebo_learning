@@ -156,10 +156,11 @@
     <static>true</static>
   </gazebo>
 
-  <!-- ========== 新增 ros2_control 配置 ========== -->
+
+
   <ros2_control name="GazeboSystem" type="system">
     <hardware>
-      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+      <plugin>mock_components/GenericSystem</plugin>
     </hardware>
     <joint name="joint_Leg_1">
       <command_interface name="position"/>
@@ -179,10 +180,10 @@
     </joint>
   </ros2_control>
 
-  <!-- 全局 Gazebo 插件，加载 ros2_control -->
+  <!-- 全局 Gazebo 插件（Jazzy 版本） -->
   <gazebo>
-    <plugin filename="libgz_ros2_control-system.so" name="gz_ros2_control">
-      <robot_param>robot_description</robot_param>
+    <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+      <parameters>$(find Leg)/config/leg_controllers.yaml</parameters>
     </plugin>
   </gazebo>
 
