@@ -1,0 +1,31 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 200            # 提高控制频率，响应更快
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+    leg_joint_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+leg_joint_trajectory_controller:
+  ros__parameters:
+    joints:
+      - joint_Leg_1
+      - joint_Leg2
+      - joint_Leg_3
+      - joint_Leg_4
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+    # 每个关节的 PID（大 P + 适当 D）
+    gains:
+      joint_Leg_1: {p: 200.0, d: 20.0, i: 0.0, i_clamp: 0.0}
+      joint_Leg2:  {p: 200.0, d: 20.0, i: 0.0, i_clamp: 0.0}
+      joint_Leg_3: {p: 200.0, d: 20.0, i: 0.0, i_clamp: 0.0}
+      joint_Leg_4: {p: 200.0, d: 20.0, i: 0.0, i_clamp: 0.0}
+    constraints:
+      goal_time: 0.0
+      stopped_velocity_tolerance: 0.01
+    # 速度与加速度限制（防止冲击）
+    velocity_limits: [3.1, 3.1, 3.1, 3.1]    # 0.31 rad/s ≈ 17.8°/s
+    acceleration_limits: [8.0, 8.0, 8.0, 8.0]    # 8 rad/s2 是典型舵机加速度

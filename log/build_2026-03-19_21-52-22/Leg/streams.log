@@ -1,0 +1,16 @@
+[1.193s] Invoking command in '/home/rasp/Desktop/Leg/build/Leg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/Desktop/Leg/build/Leg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rasp/Desktop/Leg/build/Leg/build --no-deps symlink_data
+[1.634s] running develop
+[1.893s] running egg_info
+[1.917s] writing Leg.egg-info/PKG-INFO
+[1.917s] writing dependency_links to Leg.egg-info/dependency_links.txt
+[1.923s] writing requirements to Leg.egg-info/requires.txt
+[1.924s] writing top-level names to Leg.egg-info/top_level.txt
+[1.976s] reading manifest file 'Leg.egg-info/SOURCES.txt'
+[1.977s] writing manifest file 'Leg.egg-info/SOURCES.txt'
+[2.003s] running build_ext
+[2.003s] Creating /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg.egg-link (link to .)
+[2.004s] 
+[2.004s] Installed /home/rasp/Desktop/Leg/build/Leg
+[2.004s] running symlink_data
+[2.005s] symbolically linking /home/rasp/Desktop/Leg/build/Leg/launch/gazebo.launch.py -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/launch
+[2.090s] Invoked command in '/home/rasp/Desktop/Leg/build/Leg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/Desktop/Leg/build/Leg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rasp/Desktop/Leg/build/Leg/build --no-deps symlink_data

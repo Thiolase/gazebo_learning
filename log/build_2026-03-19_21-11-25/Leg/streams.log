@@ -1,0 +1,44 @@
+[1.566s] Invoking command in '/home/rasp/Desktop/Leg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/Desktop/Leg/build/Leg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/Leg build --build-base /home/rasp/Desktop/Leg/build/Leg/build install --record /home/rasp/Desktop/Leg/build/Leg/install.log --single-version-externally-managed install_data
+[1.943s] running egg_info
+[1.943s] creating build/Leg/Leg.egg-info
+[1.967s] writing build/Leg/Leg.egg-info/PKG-INFO
+[1.967s] writing dependency_links to build/Leg/Leg.egg-info/dependency_links.txt
+[1.968s] writing requirements to build/Leg/Leg.egg-info/requires.txt
+[1.968s] writing top-level names to build/Leg/Leg.egg-info/top_level.txt
+[1.969s] writing manifest file 'build/Leg/Leg.egg-info/SOURCES.txt'
+[2.018s] reading manifest file 'build/Leg/Leg.egg-info/SOURCES.txt'
+[2.019s] writing manifest file 'build/Leg/Leg.egg-info/SOURCES.txt'
+[2.019s] running build
+[2.019s] running build_py
+[2.019s] creating /home/rasp/Desktop/Leg/build/Leg/build
+[2.019s] creating /home/rasp/Desktop/Leg/build/Leg/build/lib
+[2.019s] creating /home/rasp/Desktop/Leg/build/Leg/build/lib/Leg
+[2.020s] copying Leg/__init__.py -> /home/rasp/Desktop/Leg/build/Leg/build/lib/Leg
+[2.020s] running install
+[2.029s] running install_lib
+[2.054s] creating /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg
+[2.054s] copying /home/rasp/Desktop/Leg/build/Leg/build/lib/Leg/__init__.py -> /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg
+[2.055s] byte-compiling /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg/__init__.py to __init__.cpython-312.pyc
+[2.055s] running install_data
+[2.055s] creating /home/rasp/Desktop/Leg/install/Leg/share/ament_index
+[2.056s] creating /home/rasp/Desktop/Leg/install/Leg/share/ament_index/resource_index
+[2.056s] creating /home/rasp/Desktop/Leg/install/Leg/share/ament_index/resource_index/packages
+[2.056s] copying resource/Leg -> /home/rasp/Desktop/Leg/install/Leg/share/ament_index/resource_index/packages
+[2.056s] copying package.xml -> /home/rasp/Desktop/Leg/install/Leg/share/Leg
+[2.056s] creating /home/rasp/Desktop/Leg/install/Leg/share/Leg/launch
+[2.056s] copying launch/display.launch.py -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/launch
+[2.056s] creating /home/rasp/Desktop/Leg/install/Leg/share/Leg/urdf
+[2.056s] copying urdf/Leg.urdf -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/urdf
+[2.057s] creating /home/rasp/Desktop/Leg/install/Leg/share/Leg/rviz
+[2.057s] creating /home/rasp/Desktop/Leg/install/Leg/share/Leg/meshes
+[2.057s] copying meshes/Leg_4.STL -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/meshes
+[2.057s] copying meshes/Leg_3.STL -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/meshes
+[2.058s] copying meshes/base_link.STL -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/meshes
+[2.062s] copying meshes/Leg_2.STL -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/meshes
+[2.063s] copying meshes/Leg_1.STL -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/meshes
+[2.066s] creating /home/rasp/Desktop/Leg/install/Leg/share/Leg/worlds
+[2.066s] running install_egg_info
+[2.093s] Copying build/Leg/Leg.egg-info to /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg-0.0.0-py3.12.egg-info
+[2.094s] running install_scripts
+[2.271s] writing list of installed files to '/home/rasp/Desktop/Leg/build/Leg/install.log'
+[2.349s] Invoked command in '/home/rasp/Desktop/Leg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/Desktop/Leg/build/Leg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/Leg build --build-base /home/rasp/Desktop/Leg/build/Leg/build install --record /home/rasp/Desktop/Leg/build/Leg/install.log --single-version-externally-managed install_data
