@@ -1,0 +1,18 @@
+running egg_info
+writing build/Leg/Leg.egg-info/PKG-INFO
+writing dependency_links to build/Leg/Leg.egg-info/dependency_links.txt
+writing requirements to build/Leg/Leg.egg-info/requires.txt
+writing top-level names to build/Leg/Leg.egg-info/top_level.txt
+reading manifest file 'build/Leg/Leg.egg-info/SOURCES.txt'
+writing manifest file 'build/Leg/Leg.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+copying urdf/Leg.urdf -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/urdf
+running install_egg_info
+removing '/home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg-0.0.0-py3.12.egg-info' (and everything under it)
+Copying build/Leg/Leg.egg-info to /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg-0.0.0-py3.12.egg-info
+running install_scripts
+writing list of installed files to '/home/rasp/Desktop/Leg/build/Leg/install.log'

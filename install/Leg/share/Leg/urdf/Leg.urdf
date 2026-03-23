@@ -1,1 +1,199 @@
-/home/rasp/Desktop/Leg/build/Leg/urdf/Leg.urdf
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="Leg">
+  <!-- 原有的链接和关节定义保持不变 -->
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0.0254120573607428 0.0037085997756181 -0.000876996370279701" rpy="0 0 0" />
+      <mass value="0.0401565735863501" />
+      <inertia ixx="7.78992877425675E-06" ixy="-3.92466354425547E-08" ixz="-2.69869430355554E-08" iyy="7.62922802861573E-06" iyz="1.94603362326273E-07" izz="1.04986610025575E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://Leg/meshes/base_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 0.6 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://Leg/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="Leg_1">
+    <inertial>
+      <origin xyz="0.0413141720640879 0.0392213512107975 -1.67091232394778E-05" rpy="0 0 0" />
+      <mass value="0.0348772518340809" />
+      <inertia ixx="1.12546320349194E-05" ixy="3.42894274420889E-07" ixz="-1.05210832978556E-07" iyy="1.10970774797363E-05" iyz="-1.25733578572643E-07" izz="8.63638613604392E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://Leg/meshes/Leg_1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://Leg/meshes/Leg_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_Leg_1" type="continuous">
+    <origin xyz="0.0597500000061466 -0.000300000023835567 0" rpy="1.57079632679481 0 0" />
+    <parent link="base_link" />
+    <child link="Leg_1" />
+    <axis xyz="0 0 -1" />
+  </joint>
+
+  <link name="Leg_2">
+    <inertial>
+      <origin xyz="0.00800260485368348 -0.0575720154976572 2.60433793963788E-05" rpy="0 0 0" />
+      <mass value="0.0341924935893875" />
+      <inertia ixx="1.08076301002068E-05" ixy="-3.37090278552172E-08" ixz="-4.04849882290978E-08" iyy="1.15080469221478E-05" iyz="1.58868804977837E-07" izz="8.60133850008366E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://Leg/meshes/Leg_2.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://Leg/meshes/Leg_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_Leg2" type="continuous">
+    <origin xyz="0.0577581550895658 0.0454566609036277 0" rpy="0 0 0.663372961127232" />
+    <parent link="Leg_1" />
+    <child link="Leg_2" />
+    <axis xyz="0 0 -1" />
+  </joint>
+
+  <link name="Leg_3">
+    <inertial>
+      <origin xyz="0.0231331387405495 -0.0161514626865717 0.000159937465486593" rpy="0 0 0" />
+      <mass value="0.0326833686767767" />
+      <inertia ixx="1.98411185421025E-05" ixy="4.84522416010957E-06" ixz="1.20612382758159E-07" iyy="2.33978349979187E-05" iyz="-8.42077053664508E-08" izz="1.50695085596818E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://Leg/meshes/Leg_3.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 0.6 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://Leg/meshes/Leg_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_Leg_3" type="continuous">
+    <origin xyz="0.00360534059696155 -0.0734153527484506 0" rpy="0 0 -1.53193066559565" />
+    <parent link="Leg_2" />
+    <child link="Leg_3" />
+    <axis xyz="0 0 1" />
+  </joint>
+
+  <link name="Leg_4">
+    <inertial>
+      <origin xyz="-0.010383248599432 -2.04562672356801E-10 -1.6748713305148E-08" rpy="0 0 0" />
+      <mass value="0.0180361186796444" />
+      <inertia ixx="2.7025306670337E-06" ixy="-2.39045198939363E-12" ixz="1.24857653360103E-11" iyy="3.16197742555103E-06" iyz="7.67463061587718E-13" izz="3.16197793559145E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://Leg/meshes/Leg_4.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://Leg/meshes/Leg_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_Leg_4" type="continuous">
+    <origin xyz="0.0688738806150996 -0.0480873015395301 0.000550000047700117" rpy="0 0 -0.609512575399806" />
+    <parent link="Leg_3" />
+    <child link="Leg_4" />
+    <axis xyz="-1 0 0" />
+  </joint>
+
+  <!-- 虚拟世界链接，用于固定机械臂（只定义一次） -->
+  <link name="world"/>
+
+  <!-- 固定关节：将 base_link 连接到 world -->
+  <joint name="world_to_base" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 1" rpy="0 0 0"/>
+  </joint>
+
+  <!-- 让 world 链接静止（不受重力影响） -->
+  <gazebo reference="world">
+    <gravity>false</gravity>
+    <static>true</static>
+  </gazebo>
+
+  <!-- ========== ros2_control 配置（使用真正的 Gazebo 插件） ========== -->
+  <ros2_control name="GazeboSystem" type="system">
+    <hardware>
+      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+    </hardware>
+
+    <joint name="joint_Leg_1">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="joint_Leg2">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="joint_Leg_3">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="joint_Leg_4">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+
+
+
+  <!-- Gazebo 插件：加载 ros2_control -->
+  <gazebo>
+    <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+      <parameters>/home/rasp/Desktop/Leg/config/leg_controllers.yaml</parameters>
+    </plugin>
+  </gazebo>
+
+</robot>
