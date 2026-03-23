@@ -6,11 +6,13 @@ from launch.actions import SetEnvironmentVariable, IncludeLaunchDescription, Reg
 from launch.event_handlers import OnProcessStart
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
-
+from launch.substitutions import LaunchConfiguration
 
 def generate_launch_description():
     package_name = 'Leg'
     urdf_file_name = 'Leg.urdf'
+    use_sim_time = LaunchConfiguration('use_sim_time', default=True)
+    gz_args = LaunchConfiguration('gz_args', default='')
 
     package_share_directory = get_package_share_directory(package_name)
     urdf_path = os.path.join(package_share_directory, 'urdf', urdf_file_name)
@@ -69,6 +71,14 @@ def generate_launch_description():
             '--controller-manager', '/controller_manager'
         ],
         output='screen',
+    )
+
+    clock_bridge = Node(
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        arguments=['/clock@rosgraph_msgs/msg/Clock@gz.msgs.Clock]'],   # 方向改为 ]
+        parameters=[{'qos_overrides./clock.subscriber.reliability': 'best_effort'}],
+        output='screen'
     )
 
     return LaunchDescription([

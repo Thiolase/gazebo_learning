@@ -1,0 +1,20 @@
+[1.401s] Invoking command in '/home/rasp/Desktop/Leg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/Desktop/Leg/build/Leg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/Leg build --build-base /home/rasp/Desktop/Leg/build/Leg/build install --record /home/rasp/Desktop/Leg/build/Leg/install.log --single-version-externally-managed install_data
+[1.828s] running egg_info
+[1.859s] writing build/Leg/Leg.egg-info/PKG-INFO
+[1.860s] writing dependency_links to build/Leg/Leg.egg-info/dependency_links.txt
+[1.860s] writing requirements to build/Leg/Leg.egg-info/requires.txt
+[1.860s] writing top-level names to build/Leg/Leg.egg-info/top_level.txt
+[1.922s] reading manifest file 'build/Leg/Leg.egg-info/SOURCES.txt'
+[1.923s] writing manifest file 'build/Leg/Leg.egg-info/SOURCES.txt'
+[1.924s] running build
+[1.924s] running build_py
+[1.924s] running install
+[1.934s] running install_lib
+[1.964s] running install_data
+[1.964s] copying launch/gazebo.launch.py -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/launch
+[1.971s] running install_egg_info
+[2.007s] removing '/home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg-0.0.0-py3.12.egg-info' (and everything under it)
+[2.018s] Copying build/Leg/Leg.egg-info to /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg-0.0.0-py3.12.egg-info
+[2.019s] running install_scripts
+[2.256s] writing list of installed files to '/home/rasp/Desktop/Leg/build/Leg/install.log'
+[2.347s] Invoked command in '/home/rasp/Desktop/Leg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/Desktop/Leg/build/Leg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/Leg build --build-base /home/rasp/Desktop/Leg/build/Leg/build install --record /home/rasp/Desktop/Leg/build/Leg/install.log --single-version-externally-managed install_data
