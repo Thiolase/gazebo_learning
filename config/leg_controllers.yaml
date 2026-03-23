@@ -21,22 +21,22 @@ leg_joint_trajectory_controller:
       - position
     gains:
       joint_Leg_1:
-        p: 100.0
+        p: 500.0
         d: 10.0
         i: 0.0
         i_clamp: 0.0
       joint_Leg2:
-        p: 100.0
+        p: 500.0
         d: 10.0
         i: 0.0
         i_clamp: 0.0
       joint_Leg_3:
-        p: 100.0
+        p: 500.0
         d: 10.0
         i: 0.0
         i_clamp: 0.0
       joint_Leg_4:
-        p: 100.0
+        p: 500.0
         d: 10.0
         i: 0.0
         i_clamp: 0.0

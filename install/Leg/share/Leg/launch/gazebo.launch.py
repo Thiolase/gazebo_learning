@@ -1,5 +1,5 @@
 import os
-
+from launch.event_handlers import OnProcessStart, OnProcessExit
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import SetEnvironmentVariable, IncludeLaunchDescription, RegisterEventHandler, TimerAction
@@ -95,13 +95,18 @@ def generate_launch_description():
             actions=[spawn_entity]
         ),
 
+
+        # 顺序启动控制器
         RegisterEventHandler(
-            OnProcessStart(
+            OnProcessExit(
                 target_action=spawn_entity,
-                on_start=[
-                    TimerAction(period=5.0, actions=[joint_state_broadcaster_spawner]),
-                    TimerAction(period=7.0, actions=[leg_controller_spawner]),
-                ]
+                on_exit=[joint_state_broadcaster_spawner]
+            )
+        ),
+        RegisterEventHandler(
+            OnProcessExit(
+                target_action=joint_state_broadcaster_spawner,
+                on_exit=[leg_controller_spawner]
             )
         ),
     ])
