@@ -1,13 +1,12 @@
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, ExecuteProcess
-from launch.substitutions import Command, LaunchConfiguration
+from launch.actions import DeclareLaunchArgument
+from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
-from launch_ros.parameter_descriptions import ParameterValue
 
 def generate_launch_description():
-    package_name = 'Leg'  # Replace with your package name
+    package_name = 'Leg'
     urdf_file_name = 'Leg.urdf'
     rviz_config_file = 'robot_disp.rviz'
 
@@ -17,12 +16,9 @@ def generate_launch_description():
         'urdf',
         urdf_file_name)
     
-    # Read the URDF file content
+    # 读取 URDF 文件内容
     with open(urdf, 'r') as infp:
         robot_description_content = infp.read()
-
-    # Wrap the URDF content in ParameterValue to specify it as a string parameter
-    robot_description = ParameterValue(robot_description_content, value_type=str)
 
     ld = LaunchDescription()
 
@@ -32,31 +28,41 @@ def generate_launch_description():
         description='Use simulation (Gazebo) clock if true'
     ))
 
+    # robot_state_publisher - 使用 URDF 文件内容
     ld.add_action(Node(
         package='robot_state_publisher',
-            executable='robot_state_publisher',
-            name='robot_state_publisher',
-            output='screen',
-            parameters=[{'robot_description': robot_description}]
+        executable='robot_state_publisher',
+        name='robot_state_publisher',
+        output='screen',
+        parameters=[{
+            'robot_description': robot_description_content,
+            'use_sim_time': LaunchConfiguration('use_sim_time')
+        }]
     ))
 
+    # joint_state_publisher_gui - 用于手动控制关节
     ld.add_action(Node(
         package='joint_state_publisher_gui',
         executable='joint_state_publisher_gui',
         name='joint_state_publisher_gui',
         output='screen',
-        parameters=[{'robot_description': robot_description}]
+        parameters=[{
+            'robot_description': robot_description_content,
+            'use_sim_time': LaunchConfiguration('use_sim_time')
+        }]
     ))
 
+    # RViz2
     ld.add_action(Node(
         package='rviz2',
         executable='rviz2',
         name='rviz2',
         output='screen',
-        arguments=['-d',rviz_config_path]
-
+        arguments=['-d', rviz_config_path],
+        parameters=[{'use_sim_time': LaunchConfiguration('use_sim_time')}]
     ))
     
+    # 静态 TF：map -> base_link
     ld.add_action(Node(
         package='tf2_ros',
         executable='static_transform_publisher',

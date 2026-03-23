@@ -140,7 +140,7 @@
     <axis xyz="-1 0 0" />
   </joint>
 
-  <!-- 虚拟世界链接，用于固定机械臂 -->
+  <!-- 虚拟世界链接，用于固定机械臂（只定义一次） -->
   <link name="world"/>
 
   <!-- 固定关节：将 base_link 连接到 world -->
@@ -151,19 +151,6 @@
   </joint>
 
   <!-- 让 world 链接静止（不受重力影响） -->
-  <gazebo reference="world">
-    <gravity>false</gravity>
-    <static>true</static>
-  </gazebo>
-  <!-- 虚拟世界链接 -->
-  <link name="world"/>
-  <joint name="world_to_base" type="fixed">
-    <parent link="world"/>
-    <child link="base_link"/>
-    <origin xyz="0 0 1" rpy="0 0 0"/>
-  </joint>
-
-  <!-- 让 world 链接静止 -->
   <gazebo reference="world">
     <gravity>false</gravity>
     <static>true</static>
@@ -195,9 +182,8 @@
   <!-- Gazebo 插件：加载 ros2_control -->
   <gazebo>
     <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
-      <parameters>$(find Leg)/config/leg_controllers.yaml</parameters>
+    
     </plugin>
   </gazebo>
 
 </robot>
-
