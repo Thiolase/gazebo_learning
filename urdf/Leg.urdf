@@ -159,30 +159,44 @@
   <!-- ========== ros2_control 配置（使用真正的 Gazebo 插件） ========== -->
   <ros2_control name="GazeboSystem" type="system">
     <hardware>
-      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+      <plugin>gz_ros2_control::GazeboSimSystem</plugin>
     </hardware>
+
     <joint name="joint_Leg_1">
       <command_interface name="position"/>
       <state_interface name="position"/>
+      <state_interface name="velocity"/>
     </joint>
+
     <joint name="joint_Leg2">
       <command_interface name="position"/>
       <state_interface name="position"/>
+      <state_interface name="velocity"/>
     </joint>
+
     <joint name="joint_Leg_3">
       <command_interface name="position"/>
       <state_interface name="position"/>
+      <state_interface name="velocity"/>
     </joint>
+
     <joint name="joint_Leg_4">
       <command_interface name="position"/>
       <state_interface name="position"/>
+      <state_interface name="velocity"/>
     </joint>
   </ros2_control>
+
+<gazebo>
+  <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+    <parameters>/home/rasp/Desktop/Leg/install/Leg/share/Leg/config/leg_controllers.yaml</parameters>
+  </plugin>
+</gazebo>
 
   <!-- Gazebo 插件：加载 ros2_control -->
   <gazebo>
     <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
-    
+      <parameters>/home/rasp/Desktop/Leg/install/Leg/share/Leg/config/leg_controllers.yaml</parameters>
     </plugin>
   </gazebo>
 
