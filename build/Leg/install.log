@@ -1,5 +1,7 @@
 /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg/__init__.py
+/home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg/action_player.py
 /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg/__pycache__/__init__.cpython-312.pyc
+/home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg/__pycache__/action_player.cpython-312.pyc
 /home/rasp/Desktop/Leg/install/Leg/share/ament_index/resource_index/packages/Leg
 /home/rasp/Desktop/Leg/install/Leg/share/Leg/package.xml
 /home/rasp/Desktop/Leg/install/Leg/share/Leg/launch/display.launch.py
@@ -13,9 +15,15 @@
 /home/rasp/Desktop/Leg/install/Leg/share/Leg/meshes/Leg_1.STL
 /home/rasp/Desktop/Leg/install/Leg/share/Leg/worlds
 /home/rasp/Desktop/Leg/install/Leg/share/Leg/config/leg_controllers.yaml
+/home/rasp/Desktop/Leg/install/Leg/share/Leg/actions/sequence.json
+/home/rasp/Desktop/Leg/install/Leg/share/Leg/actions/2_swing.txt
+/home/rasp/Desktop/Leg/install/Leg/share/Leg/actions/1_extent.txt
+/home/rasp/Desktop/Leg/install/Leg/share/Leg/actions/0_start.txt
 /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg-0.0.0-py3.12.egg-info/requires.txt
 /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg-0.0.0-py3.12.egg-info/top_level.txt
 /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg-0.0.0-py3.12.egg-info/zip-safe
 /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg-0.0.0-py3.12.egg-info/PKG-INFO
 /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg-0.0.0-py3.12.egg-info/SOURCES.txt
 /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg-0.0.0-py3.12.egg-info/dependency_links.txt
+/home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg-0.0.0-py3.12.egg-info/entry_points.txt
+/home/rasp/Desktop/Leg/install/Leg/lib/Leg/action_player

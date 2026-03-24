@@ -1,0 +1,69 @@
+{
+  "name": "walk_sequence",
+  "description": "四足机器人行走序列",
+  "author": "Robot Controller",
+  "version": "1.0",
+  "frames_per_second": 5,
+  "loop_count": 1,
+  "sequence": [
+    {
+      "file": "0_start.txt",
+      "description": "启动位姿",
+      "pre_air_commands": [
+        {"command": "open_air_pump", "args": []},
+        {"command": "open_air_path", "args": [0]},
+        {"command": "open_air_path", "args": [1]},
+        {"command": "open_air_path", "args": [2]},
+        {"command": "open_air_path", "args": [3]}
+      ],
+      "post_air_commands": [
+        {"command": "close_air_path", "args": [0]}
+      ],
+      "frame_air_commands": {
+        "5": [
+          {"command": "open_air_path", "args": [1]}
+        ],
+        "8": [
+          {"command": "close_air_path", "args": [1]}
+        ]
+      }
+    },
+    {
+      "file": "1_extent.txt",
+      "description": "依次抬腿",
+      "pre_air_commands": [
+        {"command": "close_air_path", "args": [0]}
+      ],
+      "frame_air_commands": {
+        "4": [
+          {"command": "open_air_path", "args": [0]},
+          {"command": "close_air_path", "args": [1]}
+        ],
+
+        "7": [
+          {"command": "open_air_path", "args": [1]},
+          {"command": "close_air_path", "args": [2]}
+        ],
+        
+        "10": [
+          {"command": "open_air_path", "args": [2]},
+          {"command": "close_air_path", "args": [3]}
+        ]
+      },
+      "post_air_commands": [
+        {"command": "open_air_path", "args": [3]}
+      ]
+    },
+    {
+      "file": "2_swing.txt",
+      "description": "平移",
+      "pre_air_commands": [
+        {"command": "open_air_path", "args": [3]}
+      ],
+      "post_air_commands": [
+        {"command": "close_air_path", "args": [3]},
+        {"command": "close_air_pump", "args": []}
+      ]
+    }
+  ]
+}

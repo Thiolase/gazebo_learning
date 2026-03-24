@@ -1,0 +1,22 @@
+[1.251s] Invoking command in '/home/rasp/Desktop/Leg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/Desktop/Leg/build/Leg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/Leg build --build-base /home/rasp/Desktop/Leg/build/Leg/build install --record /home/rasp/Desktop/Leg/build/Leg/install.log --single-version-externally-managed install_data
+[1.629s] running egg_info
+[1.656s] writing build/Leg/Leg.egg-info/PKG-INFO
+[1.656s] writing dependency_links to build/Leg/Leg.egg-info/dependency_links.txt
+[1.662s] writing entry points to build/Leg/Leg.egg-info/entry_points.txt
+[1.663s] writing requirements to build/Leg/Leg.egg-info/requires.txt
+[1.664s] writing top-level names to build/Leg/Leg.egg-info/top_level.txt
+[1.720s] reading manifest file 'build/Leg/Leg.egg-info/SOURCES.txt'
+[1.721s] writing manifest file 'build/Leg/Leg.egg-info/SOURCES.txt'
+[1.722s] running build
+[1.722s] running build_py
+[1.722s] running install
+[1.732s] running install_lib
+[1.759s] running install_data
+[1.760s] copying actions/sequence.json -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/actions
+[1.760s] running install_egg_info
+[1.789s] removing '/home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg-0.0.0-py3.12.egg-info' (and everything under it)
+[1.789s] Copying build/Leg/Leg.egg-info to /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg-0.0.0-py3.12.egg-info
+[1.790s] running install_scripts
+[1.977s] Installing action_player script to /home/rasp/Desktop/Leg/install/Leg/lib/Leg
+[1.978s] writing list of installed files to '/home/rasp/Desktop/Leg/build/Leg/install.log'
+[2.063s] Invoked command in '/home/rasp/Desktop/Leg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/Desktop/Leg/build/Leg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/Leg build --build-base /home/rasp/Desktop/Leg/build/Leg/build install --record /home/rasp/Desktop/Leg/build/Leg/install.log --single-version-externally-managed install_data

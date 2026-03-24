@@ -1,0 +1,57 @@
+running egg_info
+creating build/Leg/Leg.egg-info
+writing build/Leg/Leg.egg-info/PKG-INFO
+writing dependency_links to build/Leg/Leg.egg-info/dependency_links.txt
+writing entry points to build/Leg/Leg.egg-info/entry_points.txt
+writing requirements to build/Leg/Leg.egg-info/requires.txt
+writing top-level names to build/Leg/Leg.egg-info/top_level.txt
+writing manifest file 'build/Leg/Leg.egg-info/SOURCES.txt'
+reading manifest file 'build/Leg/Leg.egg-info/SOURCES.txt'
+writing manifest file 'build/Leg/Leg.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/rasp/Desktop/Leg/build/Leg/build
+creating /home/rasp/Desktop/Leg/build/Leg/build/lib
+creating /home/rasp/Desktop/Leg/build/Leg/build/lib/Leg
+copying Leg/__init__.py -> /home/rasp/Desktop/Leg/build/Leg/build/lib/Leg
+copying Leg/play_action.py -> /home/rasp/Desktop/Leg/build/Leg/build/lib/Leg
+running install
+running install_lib
+creating /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg
+copying /home/rasp/Desktop/Leg/build/Leg/build/lib/Leg/__init__.py -> /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg
+copying /home/rasp/Desktop/Leg/build/Leg/build/lib/Leg/play_action.py -> /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg
+byte-compiling /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg/play_action.py to play_action.cpython-312.pyc
+running install_data
+creating /home/rasp/Desktop/Leg/install/Leg/share/ament_index
+creating /home/rasp/Desktop/Leg/install/Leg/share/ament_index/resource_index
+creating /home/rasp/Desktop/Leg/install/Leg/share/ament_index/resource_index/packages
+copying resource/Leg -> /home/rasp/Desktop/Leg/install/Leg/share/ament_index/resource_index/packages
+copying package.xml -> /home/rasp/Desktop/Leg/install/Leg/share/Leg
+creating /home/rasp/Desktop/Leg/install/Leg/share/Leg/launch
+copying launch/display.launch.py -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/launch
+copying launch/gazebo.launch.py -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/launch
+creating /home/rasp/Desktop/Leg/install/Leg/share/Leg/urdf
+copying urdf/Leg.urdf -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/urdf
+creating /home/rasp/Desktop/Leg/install/Leg/share/Leg/rviz
+creating /home/rasp/Desktop/Leg/install/Leg/share/Leg/meshes
+copying meshes/Leg_4.STL -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/meshes
+copying meshes/Leg_3.STL -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/meshes
+copying meshes/base_link.STL -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/meshes
+copying meshes/Leg_2.STL -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/meshes
+copying meshes/Leg_1.STL -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/meshes
+creating /home/rasp/Desktop/Leg/install/Leg/share/Leg/worlds
+creating /home/rasp/Desktop/Leg/install/Leg/share/Leg/config
+copying config/leg_controllers.yaml -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/config
+creating /home/rasp/Desktop/Leg/install/Leg/share/Leg/actions
+copying actions/servo_angles.txt -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/actions
+copying actions/turn/cleaned_turn5.txt -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/actions
+copying actions/turn/sequence.json -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/actions
+copying actions/walk/2_swing.txt -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/actions
+copying actions/walk/1_extent.txt -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/actions
+copying actions/walk/0_start.txt -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/actions
+running install_egg_info
+Copying build/Leg/Leg.egg-info to /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg-0.0.0-py3.12.egg-info
+running install_scripts
+Installing action_player script to /home/rasp/Desktop/Leg/install/Leg/lib/Leg
+writing list of installed files to '/home/rasp/Desktop/Leg/build/Leg/install.log'

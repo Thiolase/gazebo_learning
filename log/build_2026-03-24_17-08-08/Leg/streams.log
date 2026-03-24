@@ -1,0 +1,59 @@
+[1.228s] Invoking command in '/home/rasp/Desktop/Leg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/Desktop/Leg/build/Leg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/Leg build --build-base /home/rasp/Desktop/Leg/build/Leg/build install --record /home/rasp/Desktop/Leg/build/Leg/install.log --single-version-externally-managed install_data
+[1.602s] running egg_info
+[1.603s] creating build/Leg/Leg.egg-info
+[1.629s] writing build/Leg/Leg.egg-info/PKG-INFO
+[1.629s] writing dependency_links to build/Leg/Leg.egg-info/dependency_links.txt
+[1.630s] writing entry points to build/Leg/Leg.egg-info/entry_points.txt
+[1.630s] writing requirements to build/Leg/Leg.egg-info/requires.txt
+[1.630s] writing top-level names to build/Leg/Leg.egg-info/top_level.txt
+[1.630s] writing manifest file 'build/Leg/Leg.egg-info/SOURCES.txt'
+[1.684s] reading manifest file 'build/Leg/Leg.egg-info/SOURCES.txt'
+[1.686s] writing manifest file 'build/Leg/Leg.egg-info/SOURCES.txt'
+[1.686s] running build
+[1.686s] running build_py
+[1.686s] creating /home/rasp/Desktop/Leg/build/Leg/build
+[1.686s] creating /home/rasp/Desktop/Leg/build/Leg/build/lib
+[1.686s] creating /home/rasp/Desktop/Leg/build/Leg/build/lib/Leg
+[1.686s] copying Leg/__init__.py -> /home/rasp/Desktop/Leg/build/Leg/build/lib/Leg
+[1.687s] copying Leg/play_action.py -> /home/rasp/Desktop/Leg/build/Leg/build/lib/Leg
+[1.687s] running install
+[1.697s] running install_lib
+[1.724s] creating /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg
+[1.724s] copying /home/rasp/Desktop/Leg/build/Leg/build/lib/Leg/__init__.py -> /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg
+[1.724s] copying /home/rasp/Desktop/Leg/build/Leg/build/lib/Leg/play_action.py -> /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg
+[1.725s] byte-compiling /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg/__init__.py to __init__.cpython-312.pyc
+[1.725s] byte-compiling /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg/play_action.py to play_action.cpython-312.pyc
+[1.727s] running install_data
+[1.727s] creating /home/rasp/Desktop/Leg/install/Leg/share/ament_index
+[1.727s] creating /home/rasp/Desktop/Leg/install/Leg/share/ament_index/resource_index
+[1.727s] creating /home/rasp/Desktop/Leg/install/Leg/share/ament_index/resource_index/packages
+[1.727s] copying resource/Leg -> /home/rasp/Desktop/Leg/install/Leg/share/ament_index/resource_index/packages
+[1.727s] copying package.xml -> /home/rasp/Desktop/Leg/install/Leg/share/Leg
+[1.727s] creating /home/rasp/Desktop/Leg/install/Leg/share/Leg/launch
+[1.728s] copying launch/display.launch.py -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/launch
+[1.728s] copying launch/gazebo.launch.py -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/launch
+[1.728s] creating /home/rasp/Desktop/Leg/install/Leg/share/Leg/urdf
+[1.728s] copying urdf/Leg.urdf -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/urdf
+[1.728s] creating /home/rasp/Desktop/Leg/install/Leg/share/Leg/rviz
+[1.728s] creating /home/rasp/Desktop/Leg/install/Leg/share/Leg/meshes
+[1.728s] copying meshes/Leg_4.STL -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/meshes
+[1.729s] copying meshes/Leg_3.STL -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/meshes
+[1.730s] copying meshes/base_link.STL -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/meshes
+[1.733s] copying meshes/Leg_2.STL -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/meshes
+[1.735s] copying meshes/Leg_1.STL -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/meshes
+[1.737s] creating /home/rasp/Desktop/Leg/install/Leg/share/Leg/worlds
+[1.737s] creating /home/rasp/Desktop/Leg/install/Leg/share/Leg/config
+[1.737s] copying config/leg_controllers.yaml -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/config
+[1.737s] creating /home/rasp/Desktop/Leg/install/Leg/share/Leg/actions
+[1.737s] copying actions/servo_angles.txt -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/actions
+[1.738s] copying actions/turn/cleaned_turn5.txt -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/actions
+[1.738s] copying actions/turn/sequence.json -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/actions
+[1.738s] copying actions/walk/2_swing.txt -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/actions
+[1.738s] copying actions/walk/1_extent.txt -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/actions
+[1.738s] copying actions/walk/0_start.txt -> /home/rasp/Desktop/Leg/install/Leg/share/Leg/actions
+[1.738s] running install_egg_info
+[1.768s] Copying build/Leg/Leg.egg-info to /home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages/Leg-0.0.0-py3.12.egg-info
+[1.769s] running install_scripts
+[1.954s] Installing action_player script to /home/rasp/Desktop/Leg/install/Leg/lib/Leg
+[1.955s] writing list of installed files to '/home/rasp/Desktop/Leg/build/Leg/install.log'
+[2.030s] Invoked command in '/home/rasp/Desktop/Leg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rasp/Desktop/Leg/build/Leg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rasp/Desktop/Leg/install/Leg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/Leg build --build-base /home/rasp/Desktop/Leg/build/Leg/build install --record /home/rasp/Desktop/Leg/build/Leg/install.log --single-version-externally-managed install_data

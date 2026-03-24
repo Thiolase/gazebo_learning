@@ -1,1 +1,0 @@
-/home/rasp/Desktop/Leg/launch/gazebo.launch.py

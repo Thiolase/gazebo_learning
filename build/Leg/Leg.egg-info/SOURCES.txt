@@ -2,9 +2,15 @@ package.xml
 setup.cfg
 setup.py
 Leg/__init__.py
+Leg/action_player.py
+actions/0_start.txt
+actions/1_extent.txt
+actions/2_swing.txt
+actions/sequence.json
 build/Leg/Leg.egg-info/PKG-INFO
 build/Leg/Leg.egg-info/SOURCES.txt
 build/Leg/Leg.egg-info/dependency_links.txt
+build/Leg/Leg.egg-info/entry_points.txt
 build/Leg/Leg.egg-info/requires.txt
 build/Leg/Leg.egg-info/top_level.txt
 build/Leg/Leg.egg-info/zip-safe

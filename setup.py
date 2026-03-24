@@ -2,7 +2,12 @@ from setuptools import find_packages, setup
 import os
 from glob import glob
 package_name = 'Leg'
-
+def list_action_files():
+    action_files = []
+    for root, dirs, files in os.walk('actions'):
+        for file in files:
+            action_files.append(os.path.join(root, file))
+    return action_files
 setup(
     name=package_name,
     version='0.0.0',
@@ -17,6 +22,7 @@ setup(
         (os.path.join('share', package_name, 'meshes'), glob('meshes/*.STL')),
         (os.path.join('share', package_name, 'worlds'), glob('worlds/*.sdf')),
         (os.path.join('share', package_name, 'config'), glob('config/*.yaml')),
+        (os.path.join('share', 'Leg', 'actions'), glob('actions/*.json') + glob('actions/*.txt')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -29,8 +35,10 @@ setup(
             'pytest',
         ],
     },
+
     entry_points={
         'console_scripts': [
+            'action_player = Leg.action_player:main',
         ],
     },
 )

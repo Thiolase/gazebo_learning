@@ -1,0 +1,2 @@
+[console_scripts]
+action_player = Leg.action_player:main
