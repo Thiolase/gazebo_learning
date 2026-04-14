@@ -84,6 +84,7 @@ class ActionPlayer(Node):
                 point = JointTrajectoryPoint()
                 point.positions = self.map_angles(frame[1:5])   # 取索引 1,2,3,4 共 4 个元素
                 point.time_from_start = Duration(seconds=current_time).to_msg()
+                self.get_logger().info(f"frame[2]={frame[2]}, positions[1]={point.positions[1]:.3f}")
                 points.append(point)
                 current_time += frame_delay
 
@@ -104,6 +105,7 @@ class ActionPlayer(Node):
         goal_handle = future.result()
         if goal_handle and goal_handle.accepted:
             self.get_logger().info("轨迹被接受")
+            #self.get_logger().info(str(point.positions[1]))
             result_future = goal_handle.get_result_async()
             rclpy.spin_until_future_complete(self, result_future)
             self.get_logger().info("轨迹执行完成")

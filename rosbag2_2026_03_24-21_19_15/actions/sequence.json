@@ -1,0 +1,9 @@
+{
+  "frames_per_second": 10,
+  "loop_count": 1,
+  "sequence": [
+    {
+      "file": "action_1.txt"
+    }
+  ]
+}
